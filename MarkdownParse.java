@@ -20,6 +20,7 @@ public class MarkdownParse {
             currentIndex = closeParen + 1;
         }
         System.out.println(currentIndex);
+        //System.out.println(toReturn.toString());
 
         return toReturn;
     }
@@ -31,6 +32,5 @@ public class MarkdownParse {
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
 
-        System.out.println("testing");
     }
 }
