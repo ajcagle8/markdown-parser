@@ -1,1 +1,1 @@
-![image](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=640:*)
+[link to dog picture](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.goodhousekeeping.com%2Flife%2Fpets%2Fg4531%2Fcutest-dog-breeds%2F&psig=AOvVaw1JN7S286th3uT0TBolLMPi&ust=1650950732045000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMCarLW_rvcCFQAAAAAdAAAAABAD)
