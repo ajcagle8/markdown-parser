@@ -23,7 +23,11 @@ public class MarkdownParse {
 
             int currentIndexBefore = currentIndex;
 
+            System.out.println(currentIndex);
+
             currentIndex = closeParen + 1;
+
+            System.out.println(currentIndex);
 
             if (currentIndex < currentIndexBefore) {
                 break;
