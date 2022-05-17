@@ -39,6 +39,8 @@ public class MarkdownParse {
         }
         System.out.println(currentIndex);
 
+        System.out.println("Lab report 3");
+
         return toReturn;
     }
 
