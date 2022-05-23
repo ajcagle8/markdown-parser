@@ -31,7 +31,8 @@ public class MarkdownParseTest {
         Path fileName = Path.of("C:\\Users\\AJCag\\Documents\\GitHub\\markdown-parser\\test-file-LR1.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
-        assertEquals(List.of("url.com", "`google.com", "google.com", "ucsd.edu"), links);
+        assertEquals(List.of("[a link](url.com)", "another link`", 
+                            "cod[e", "code]"), links);
     }
 
     @Test
@@ -40,7 +41,9 @@ public class MarkdownParseTest {
         Path fileName = Path.of("C:\\Users\\AJCag\\Documents\\GitHub\\markdown-parser\\test-file-LR2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
-        assertEquals(List.of("a.com((", "example.com"), links);
+        assertEquals(List.of("[a nested link](b.com)", 
+                            "a nested parenthesized url",
+                            "some escaped [ brackets ]"), links);
     }
 
     @Test
@@ -49,6 +52,14 @@ public class MarkdownParseTest {
         Path fileName = Path.of("C:\\Users\\AJCag\\Documents\\GitHub\\markdown-parser\\test-file-LR3.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
-        assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"), links);
+        assertEquals(List.of("[this title text is really long and takes up more than one line",
+                            "'\n'and has some line breaks]( https://www.twitter.com )",
+                            "'\n'this title text is really long and takes up more than one line",
+                            "'\n'[this link doesn't have a closing parenthesis](github.com",
+                            "'\n'And there's still some more text after that.",
+                            "'\n'[this link doesn't have a closing parenthesis for a while](https://cse.ucsd.edu/",
+                            "'\n')",
+                            "'\n'And then there's more text"), 
+                            links);
     }
 }
